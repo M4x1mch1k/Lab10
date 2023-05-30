@@ -1,0 +1,17 @@
+<app-myform (readerAdd)="addReader($event)"></app-myform>
+<ion-card *ngFor="let reader of readers; let i=index">
+  <ion-card-header>
+    <ion-card-title>{{reader.name}}</ion-card-title>
+    <ion-card-subtitle>{{reader.reader_id}}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    {{reader.email}}
+    <h2>Read Books</h2>
+    <ion-item *ngFor="let book of reader.books_read">
+      {{book}}
+    </ion-item>
+  </ion-card-content>
+  <ion-button (click)="update()">Edit</ion-button>
+  <app-updateform [reader]="reader" [show]="show_update" *ngIf="show_update"
+    (showChange)="showUp($event)" (facultyChange)="updateSave($event,i)"></app-updateform>
+</ion-card>

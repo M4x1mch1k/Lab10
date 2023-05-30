@@ -1,0 +1,22 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <ion-label>Reader ID: </ion-label>
+      <ion-input [value]="reader.reader_id" #Inputid></ion-input>
+    </ion-card-title>
+    <ion-card-subtitle>
+      <ion-label>Name: </ion-label>
+      <ion-input [value]="reader.name" #Inputn></ion-input>
+      <ion-label>Phone</ion-label>
+      <ion-input [value]="reader.phone" #Inputp></ion-input>
+      <ion-label>Email</ion-label>
+      <ion-input [value]="reader.email" #Inpute></ion-input>
+      <ion-label>Address</ion-label>
+      <ion-input [value]="reader.address" #Inputa></ion-input>
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-button
+    (click)="save(Inputid.value,Inputn.value,Inputa.value,Inputp.value,Inpute.value)">
+    Save
+  </ion-button>
+</ion-card>
