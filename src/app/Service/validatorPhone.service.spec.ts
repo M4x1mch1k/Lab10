@@ -14,10 +14,10 @@ describe('ValidateEmail', () => {
     });
 
     it('should validate if an phone is correct', () => {
-      expect(validateEmail.validatePhone('080-534-76-34')).toBe(true);
+      expect(validateEmail.validatePhone('080-534-7634')).toBe(true);
     });
   
     it('should fail if an phone is incorrect', () => {
-      expect(validateEmail.validatePhone('12331232132')).toBe(false);
+      expect(validateEmail.validatePhone('080-534-76-34')).toBe(false);
     });
   });
